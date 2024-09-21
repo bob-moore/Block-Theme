@@ -1,3 +1,9 @@
+<?php
+/**
+ * Title: Sidebar
+ * Slug: theme/template-aside-sidebar
+ */
+?>
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"blockGap":"var:preset|spacing|large"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
 <div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:search {"label":"Search","placeholder":"Search Site...","buttonText":"Search"} /-->
 

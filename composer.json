@@ -73,8 +73,8 @@
     },
     "extra": {
         "wpify-scoper": {
-            "prefix": "Mwf\\BlockTheme\\Deps",
-            "slug": "mwf_blocktheme_deps",
+            "prefix": "Devkit\\BlockTheme\\Deps",
+            "slug": "devkit_blocktheme_deps",
             "folder": "vendor/scoped",
             "globals": [
                 "wordpress",
