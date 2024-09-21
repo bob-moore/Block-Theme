@@ -46,6 +46,7 @@ config.codekit
 # dev dependencies #
 ####################
 node_modules
+vendor
 *hot-update*
 # Other #
 ####################

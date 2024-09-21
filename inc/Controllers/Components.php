@@ -79,8 +79,8 @@ class Components extends Abstracts\Controller
 	public function mountFilters(): void
 	{
 		add_filter( 'should_load_separate_core_block_assets', '__return_true' );
-		add_filter( 'wp_theme_json_data_default', [$this->editor, 'defaultColors'] );
-		
+		add_filter( 'wp_theme_json_data_default', [ $this->editor, 'defaultColors' ] );
+
 		add_filter( 'default_wp_template_part_areas', [ $this->template_parts, 'registerAreas' ] );
 		add_filter( 'post_thumbnail_id', [ $this->images, 'fallbackImage' ], 10, 2 );
 		add_filter( 'render_block_core/template-part', [ $this->blocks, 'addTagId' ], 10, 3 );
