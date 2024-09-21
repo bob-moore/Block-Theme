@@ -1,0 +1,276 @@
+@use "mixins";
+
+p:empty {
+    display: none;
+}
+
+
+body [class*="wp-block"] {
+
+    * {
+        --global-kb-font-size-sm: var(--wp--preset--font-size--fixed-small);
+        --global-kb-font-size-md: var(--wp--preset--font-size--fixed-regular);
+        --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+        --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+        --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+        --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+
+        &[class*="wp-block"] {
+            margin: unset;
+            padding: unset;
+        }
+
+        --global-kb-font-size-sm: var(--wp--preset--font-size--scaler-smaller);
+        --global-kb-font-size-md: var(--wp--preset--font-size--scaler-small);
+        --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+        --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+        --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+        --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+    }
+
+    --global-kb-spacing-xxs:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "minorSecond", .5), 1.25
+        )};
+
+    --global-kb-spacing-xs:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "minorSecond", .75), 1.25
+        )};
+
+    --global-kb-spacing-sm:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1), 1.25
+        )};
+
+    --global-kb-spacing-md:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1), 1.618
+        )};
+
+    --global-kb-spacing-lg:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.25), 1.618
+        )};
+
+    --global-kb-spacing-xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.5), 1.618
+        )};
+
+    --global-kb-spacing-xxl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 1.75), 2.5
+        )};
+
+    --global-kb-spacing-3xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2), 2.5
+        )};
+
+    --global-kb-spacing-4xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2.25), 2.5
+        )};
+
+    --global-kb-spacing-5xl:
+        #{mixins.clamp-fontsize(
+            mixins.typescale(0, "majorSecond", 2.5), 2.5
+        )};
+
+    --global-kb-gap-sm: var(--global-kb-spacing-xxs);
+    --global-kb-gap-md: var(--global-kb-spacing-sm);
+    --global-kb-gap-lg: var(--global-kb-spacing-md);
+
+    --global-row-gutter-sm: var(--global-kb-spacing-xs);
+    --global-row-gutter-md: var(--global-kb-spacing-sm);
+    --global-row-gutter-lg: var(--global-kb-spacing-md);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    .single-content &,
+    .editor-styles-wrapper & {
+        margin: unset;
+    }
+}
+
+body {
+
+    @for $i from 1 through 6 {
+
+        $level: 7 - $i;
+
+        h#{$level},
+        .h#{$level} {
+
+            --wp--preset--font-size--scaler-smaller:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", .5), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-small:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", .75), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-regular:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-large:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.2), 2.06969697
+                )};
+
+            --wp--preset--font-size--scaler-larger:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.4), 2.06969697
+                )};
+            --wp--preset--font-size--scaler-extra-large:
+                #{mixins.clamp-fontsize(
+                    mixins.typescale($i, "majorSecond", 1.6), 2.06969697
+                )};
+        }
+    }
+    --global-kb-font-size-sm: var(--wp--preset--font-size--scaler-smaller);
+    --global-kb-font-size-md: var(--wp--preset--font-size--scaler-small);
+    --global-kb-font-size-lg: var(--wp--preset--font-size--scaler-regular);
+    --global-kb-font-size-xl: var(--wp--preset--font-size--scaler-large);
+    --global-kb-font-size-xxl: var(--wp--preset--font-size--scaler-larger);
+    --global-kb-font-size-xxxl: var(--wp--preset--font-size--scaler-extra-large);
+}
+// see https://utopia.fyi/type/calculator/?c=480,16,1.067,1280,17.072,1.067,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+h1 {
+    --wp--preset--font-size--smaller: 1.476rem;
+    --wp--preset--font-size--small: 2.027rem;
+    --wp--preset--font-size--normal: 2.986rem;
+    --wp--preset--font-size--medium: 3.815rem;
+    --wp--preset--font-size--large: 5.61rem;
+    --wp--preset--font-size--larger: 7.993rem;
+    --wp--preset--font-size--extra-large: 11.391rem;
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1.383rem, 1.476rem )};
+    --wp--preset--font-size--fluid-small: #{mixins.clampSize(2.027rem, 2.027rem )};
+    --wp--preset--font-size--fluid-normal: #{mixins.clampSize(2.027rem , 2.986rem )};
+    --wp--preset--font-size--fluid-medium: #{mixins.clampSize(2.027rem, 3.815rem )};
+    --wp--preset--font-size--fluid-large: #{mixins.clampSize(2.027rem, 5.61rem )};
+    --wp--preset--font-size--fluid-larger: #{mixins.clampSize(2.027rem, 7.993rem )};
+    --wp--preset--font-size--fluid-extra-large: #{mixins.clampSize(2.027rem, 11.391rem )};
+}
+
+h2 {
+    --wp--preset--font-size--smaller: 1.383rem;
+    --wp--preset--font-size--small: 1.802rem;
+    --wp--preset--font-size--normal: 2.488rem;
+    --wp--preset--font-size--medium: 3.052rem;
+    --wp--preset--font-size--large: 4.209rem;
+    --wp--preset--font-size--larger: 5.653rem;
+    --wp--preset--font-size--extra-large: 7.594rem;
+
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1.296rem, 1.383rem )};
+    --wp--preset--font-size--fluid-small: #{mixins.clampSize(1.383rem, 1.802rem )};
+    --wp--preset--font-size--fluid-normal: #{mixins.clampSize(1.802rem, 2.488rem )};
+    --wp--preset--font-size--fluid-medium: #{mixins.clampSize(1.802rem, 3.052rem )};
+    --wp--preset--font-size--fluid-large: #{mixins.clampSize(1.802rem, 4.209rem )};
+    --wp--preset--font-size--fluid-larger: #{mixins.clampSize(1.802rem, 5.653rem )};
+    --wp--preset--font-size--fluid-extra-large: #{mixins.clampSize(1.802rem, 7.594rem )};
+}
+
+h3 {
+    --wp--preset--font-size--smaller: 1.296rem;
+    --wp--preset--font-size--small: 1.602rem;
+    --wp--preset--font-size--normal: 2.074rem;
+    --wp--preset--font-size--medium: 2.441rem;
+    --wp--preset--font-size--large: 3.157rem;
+    --wp--preset--font-size--larger: 3.998rem;
+    --wp--preset--font-size--extra-large: 5.063rem;
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1.215rem, 1.296rem )};
+    --wp--preset--font-size--fluid-small: #{mixins.clampSize(1.424rem, 1.602rem )};
+    --wp--preset--font-size--fluid-normal: #{mixins.clampSize(1.602rem, 2.074rem )};
+    --wp--preset--font-size--fluid-medium: #{mixins.clampSize(1.602rem, 2.441rem )};
+    --wp--preset--font-size--fluid-large: #{mixins.clampSize(1.602rem, 3.157rem )};
+    --wp--preset--font-size--fluid-larger: #{mixins.clampSize(1.602rem, 3.998rem )};
+    --wp--preset--font-size--fluid-extra-large: #{mixins.clampSize(1.602rem, 5.063rem )};
+}
+
+h4 {
+    --wp--preset--font-size--smaller: 1.215rem;
+    --wp--preset--font-size--small: 1.424rem;
+    --wp--preset--font-size--normal: 1.728rem;
+    --wp--preset--font-size--medium: 1.953rem;
+    --wp--preset--font-size--large: 2.369rem;
+    --wp--preset--font-size--larger: 2.827rem;
+    --wp--preset--font-size--extra-large: 3.375rem;
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1.138rem, 1.215rem )};
+    --wp--preset--font-size--fluid-small: #{mixins.clampSize(1.266rem, 1.424rem )};
+    --wp--preset--font-size--fluid-normal: #{mixins.clampSize(1.424rem, 1.728rem )};
+    --wp--preset--font-size--fluid-medium: #{mixins.clampSize(1.424rem, 1.953rem )};
+    --wp--preset--font-size--fluid-large: #{mixins.clampSize(1.424rem, 2.369rem )};
+    --wp--preset--font-size--fluid-larger: #{mixins.clampSize(1.424rem, 2.827rem )};
+    --wp--preset--font-size--fluid-extra-large: #{mixins.clampSize(1.424rem, 3.375rem )};
+}
+
+h5 {
+    --wp--preset--font-size--smaller: 1.138rem;
+    --wp--preset--font-size--small: 1.266rem;
+    --wp--preset--font-size--normal: 1.44rem;
+    --wp--preset--font-size--medium: 1.563rem;
+    --wp--preset--font-size--large: 1.777rem;
+    --wp--preset--font-size--larger: 1.999rem;
+    --wp--preset--font-size--extra-large: 2.25rem;
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1.067rem, 1.138rem )};
+    --wp--preset--font-size--fluid-small: #{mixins.clampSize(1.125rem, 1.266rem )};
+    --wp--preset--font-size--fluid-normal: #{mixins.clampSize(1.2rem, 1.44rem )};
+    --wp--preset--font-size--fluid-medium: #{mixins.clampSize(1.25rem, 1.563rem )};
+    --wp--preset--font-size--fluid-large: #{mixins.clampSize(1.333rem, 1.777rem )};
+    --wp--preset--font-size--fluid-larger: #{mixins.clampSize(1.414rem, 1.999rem )};
+    --wp--preset--font-size--fluid-extra-large: #{mixins.clampSize(1.5rem, 2.25rem )};
+}
+
+h6 {
+    --wp--preset--font-size--smaller: 1.067rem;
+    --wp--preset--font-size--small: 1.125rem;
+    --wp--preset--font-size--normal: 1.2rem;
+    --wp--preset--font-size--medium: 1.25rem;
+    --wp--preset--font-size--large: 1.333rem;
+    --wp--preset--font-size--larger: 1.414rem;
+    --wp--preset--font-size--extra-large: 1.5rem;
+
+    --wp--preset--font-size--fluid-smaller: #{mixins.clampSize(1rem, 1.067rem )};
+    --wp--preset--font-size--fluid-small: clamp(1.067rem, 1.0322rem + 0.116vi, 1.125rem);
+    --wp--preset--font-size--fluid-normal: clamp(1.125rem, 1.08rem + 0.15vi, 1.2rem);
+    --wp--preset--font-size--fluid-medium: clamp(1.2rem, 1.17rem + 0.1vi, 1.25rem);
+    --wp--preset--font-size--fluid-large: clamp(1.25rem, 1.202rem + 0.16vi, 1.33rem);
+    --wp--preset--font-size--fluid-larger: clamp(1.33rem, 1.2796rem + 0.168vi, 1.414rem);
+    --wp--preset--font-size--fluid-extra-large: clamp(1.414rem, 1.3624rem + 0.172vi, 1.5rem);
+}
+
+.p {
+    --step--2: clamp(0.8784rem, 0.843rem + 0.1177vi, 0.9372rem);
+    --step--1: clamp(0.9372rem, 0.8995rem + 0.1256vi, 1rem);
+    --step-0: clamp(1rem, 0.9598rem + 0.134vi, 1.067rem);
+    --step-1: clamp(1.067rem, 1.0241rem + 0.143vi, 1.1385rem);
+    --step-2: clamp(1.1385rem, 1.0927rem + 0.1526vi, 1.2148rem);
+    --step-3: clamp(1.2148rem, 1.1659rem + 0.1628vi, 1.2962rem);
+    --step-4: clamp(1.2962rem, 1.2441rem + 0.1737vi, 1.383rem);
+    --step-5: clamp(1.383rem, 1.3274rem + 0.1853vi, 1.4757rem);
+}

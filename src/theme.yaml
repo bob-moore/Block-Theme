@@ -1,0 +1,300 @@
+schema: 'https://schemas.wp.org/trunk/theme.json'
+version: 3
+settings:
+  appearanceTools: true
+  color:
+    defaultDuotone: false
+    defaultPalette: false
+    defaultGradients: false
+    palette:
+      - color: '#C02C29'
+        name: Primary
+        slug: primary
+      - color: '#e32723'
+        name: 'Primary : Focused'
+        slug: primary-focused
+      - color: '#232323'
+        name: Contrast
+        slug: contrast
+      - color: '#5c5c5c'
+        name: 'Contrast : Soft'
+        slug: contrast-soft
+      - color: '#E5E5E5'
+        name: Accent
+        slug: accent
+      - color: '#FFFFFF'
+        name: White
+        slug: white
+      - color: '#000000'
+        name: Black
+        slug: black
+  layout:
+    contentSize: 1110px
+    wideSize: 1366px
+  spacing:
+    defaultSpacingSizes: false
+    spacingScale:
+      steps: 0
+    spacingSizes:
+      - name: X-Small
+        size: 0.64rem
+        slug: x-small
+      - name: Small
+        size: 0.8rem
+        slug: small
+      - name: Normal
+        size: 1rem
+        slug: normal
+      - name: Medium
+        size: 1.2rem
+        slug: medium
+      - name: Large
+        size: 1.44rem
+        slug: large
+      - name: X-Large
+        size: 'clamp(1.424rem, 0.1124rem + 3.1796vw, 2.827rem)'
+        slug: x-large
+      - name: 2X-Large
+        size: 'clamp(1.602rem, 0.1483rem + 3.5241vw, 3.157rem)'
+        slug: 2x-large
+      - name: 3X-Large
+        size: 'clamp(1.802rem, -1.7981rem + 8.7275vw, 5.653rem)'
+        slug: 3x-large
+      - name: 4X-Large
+        size: 'clamp(2.027rem, -3.5503rem + 13.5207vw, 7.993rem)'
+        slug: 3x-large
+    units:
+      - '%'
+      - px
+      - em
+      - rem
+      - vh
+      - vw
+  typography:
+    fluid: true
+    fontFamilies:
+      - fontFace:
+          - fontFamily: Inter
+            fontStretch: normal
+            fontStyle: normal
+            fontWeight: 300 900
+            src:
+              - 'file:./assets/fonts/inter/Inter-VariableFont_slnt,wght.woff2'
+        fontFamily: '"Inter", sans-serif'
+        name: Inter
+        slug: body
+      - fontFace:
+          - fontFamily: Montserrat
+            fontStretch: normal
+            fontStyle: normal
+            fontWeight: 300 400 500 600 700 800 900
+            src:
+              - 'file:./assets/fonts/montserrat/Montserrat-VF.woff2'
+        fontFamily: '"Montserrat", sans-serif'
+        name: Montserrat
+        slug: heading
+      - fontFamily: >-
+          -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+          helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+          arial,sans-serif
+        name: System Sans-serif
+        slug: system-sans-serif
+      - fontFamily: >-
+          Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid
+          Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI
+          Emoji, Segoe UI Symbol
+        name: System Serif
+        slug: system-serif
+    fontSizes:
+      - fluid: false
+        name: X-Small
+        size: 0.79rem
+        slug: x-small
+      - fluid: false
+        name: Small
+        size: 0.889rem
+        slug: small
+      - fluid: false
+        name: Normal
+        size: 1rem
+        slug: normal
+      - fluid: false
+        name: Medium
+        size: 1.125rem
+        slug: medium
+      - fluid: false
+        name: Large
+        size: 1.266rem
+        slug: large
+      - fluid: false
+        name: X-Large
+        size: 1.424rem
+        slug: xlarge
+      - fluid: false
+        name: 2X-Large
+        size: 1.602rem
+        slug: 2x-large
+      - fluid: false
+        name: 3X-Large
+        size: 1.802rem
+        slug: 3x-large
+      - fluid: false
+        name: 4X-Large
+        size: 2.027rem
+        slug: 4x-large
+      - fluid:
+          min: 1.125rem
+          max: 1.25rem
+        name: H6
+        size: 1.125rem
+        slug: heading-6
+      - fluid:
+          min: 1.266rem
+          max: 1.563rem
+        name: H5
+        size: 1.266rem
+        slug: heading-5
+      - fluid:
+          min: 1.424rem
+          max: 1.953rem
+        name: H4
+        size: 1.424rem
+        slug: heading-4
+      - fluid:
+          min: 1.602rem
+          max: 2.441rem
+        name: H3
+        size: 1.602rem
+        slug: heading-3
+      - fluid:
+          min: 1.802rem
+          max: 3.052rem
+        name: H2
+        size: 1.802rem
+        slug: heading-2
+      - fluid:
+          min: 2.027rem
+          max: 3.815rem
+        name: H1
+        size: 2.027rem
+        slug: heading-1
+    writingMode: true
+  useRootPaddingAwareAlignments: true
+  custom:
+    fontWeight:
+      black: 900
+      extraBold: 800
+      bold: 700
+      semiBold: 600
+      medium: 500
+      regular: 400
+      light: 300
+      extraLight: 200
+      thin: 100
+    lineHeight:
+      initial: 1
+      xxSmall: 1.2
+      xSmall: 1.3
+      small: 1.4
+      medium: 1.45
+      large: 1.6
+    borderRadius:
+      xxSmall: 4px
+      xSmall: 6px
+      small: 8px
+      medium: 12px
+      large: 16px
+      xLarge: 20px
+      xxLarge: 24px
+      full: 999px
+styles:
+  spacing:
+    blockGap: var(--wp--preset--spacing--normal)
+  blocks:
+    core/separator:
+      css: !include src/theme/elements/core/separator.css
+    core/button:
+      typography:
+        fontSize: var(--wp--preset--font-size--normal)
+        fontWeight: var(--wp--custom--font-weight--bold)
+        lineHeight: 1
+      color:
+        background: var(--wp--preset--color--primary)
+        text: var(--wp--preset--color--white)
+      border:
+        radius: 0
+      css: '&:hover { background-color: var(--wp--preset--color--primary-focused); } &:focus { background-color: var(--wp--preset--color--primary-focused); }'
+      variations:
+        outline:
+          spacing:
+            padding:
+              bottom: calc(0.6rem - 1px)
+              left: calc(1rem - 1px)
+              right: calc(1rem - 1px)
+              top: calc(0.6rem - 1px)
+          border:
+            width: 1px
+  color:
+    background: var(--wp--preset--color--white)
+    text: var(--wp--preset--color--contrast)
+  typography:
+    fontSize: var(--wp--preset--font-size--normal)
+    fontFamily: var(--wp--preset--font-family--body)
+    fontWeight: var(--wp--custom--font-weight--regular)
+    lineHeight: var(--wp--custom--line-height--large)
+  elements:
+    heading:
+      color:
+        text: var(--wp--preset--color--contrast)
+      typography:
+        fontFamily: var(--wp--preset--font-family--heading)
+        fontWeight: '600'
+        lineHeight: '1.2'
+    h1:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-1)
+        lineHeight: '1.15'
+    h2:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-2)
+    h3:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-3)
+    h4:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-4)
+    h5:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-5)
+    h6:
+      typography:
+        fontSize: var(--wp--preset--font-size--heading-6)
+    link:
+      color:
+        text: var(--wp--preset--color--primary)
+      typography:
+        textDecoration: none
+      ':hover':
+        color:
+          text: var(--wp--preset--color--contrast)
+        typography:
+          textDecoration: underline
+      ':focus':
+        color:
+          text: var(--wp--preset--color--contrast)
+        typography:
+          textDecoration: underline
+templateParts:
+  - area: header
+    name: header
+    title: Header
+  - area: footer
+    name: footer
+    title: Footer
+  - area: uncategorized
+    name: sidebar
+    title: Sidebar
+  - area: uncategorized
+    name: post-meta
+    title: Post Meta
+customTemplates:

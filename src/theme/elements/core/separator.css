@@ -1,0 +1,6 @@
+& { 
+    border: none; 
+    height: var( --wp--element--spacer-height, 3px );
+    width: var( --wp--element--spacer-width, 100% );
+    background-color: var( --wp--preset--color--primary );
+}

@@ -1,0 +1,22 @@
+hr.wp-block-separator {
+    width: 100%;
+    border-top: 3px solid;
+
+    &.is-style-pull-left {
+        width: 50px;
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+
+    &.is-style-pull-right {
+        width: 50px;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    &.is-style-pull-center {
+        width: 50px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

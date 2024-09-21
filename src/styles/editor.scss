@@ -1,0 +1,29 @@
+@use "parts/kadence";
+
+.editor-visual-editor__post-title-wrapper {
+    background-color: #f0f0f0;
+    margin-top: 0 !important;
+    padding: var(--wp--preset--spacing--normal);
+
+    h1.wp-block-post-title {
+        font-size: 1.618rem;
+        margin: 0;
+    }
+}
+
+.is-root-container {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    &.is-layout-constrained {
+        padding-top: var(--wp--preset--spacing--normal);
+        padding-bottom: var(--wp--preset--spacing--normal);
+    }
+}
+
+:where(.is-layout-constrained) > * {
+    margin-block-end: var(--wp--preset--spacing--normal);
+    margin-block-start: 0;
+}

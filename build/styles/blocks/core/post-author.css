@@ -1,0 +1,1 @@
+.wp-block-post-author{display:flex;flex-direction:row;gap:var(--wp--preset--spacing--normal);align-items:inherit}.wp-block-post-author>*{margin:0}.wp-block-post-author .avatar{border-radius:var(--wp--element--author-avatar-radius, 100%)}.wp-block-post-author .wp-block-post-author__bio{font-size:1em;margin:1rem 0 0 0}

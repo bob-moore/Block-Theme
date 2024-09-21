@@ -1,0 +1,40 @@
+body {
+
+    /**
+    * Override Kadence blocks Spacing Sizes
+    */
+    --global-kb-spacing-xxs: var(--wp--preset--spacing--x-small);
+    --global-kb-font-size-xs: var(--wp--preset--font-size--small);
+    --global-kb-spacing-sm: var(--wp--preset--spacing--normal);
+    --global-kb-spacing-md: var(--wp--preset--spacing--medium);
+    --global-kb-spacing-lg: var(--wp--preset--spacing--large);
+    --global-kb-spacing-xl: var(--wp--preset--spacing--x-large);
+    --global-kb-spacing-xxl: var(--wp--preset--spacing--xx-large);
+    --global-kb-spacing-3xl: var(--wp--preset--spacing--xxx-large);
+    --global-kb-spacing-4xl: var(--wp--preset--spacing--xxxx-large);
+    --global-kb-spacing-5xl: var(--wp--preset--spacing--xxxxx-large);
+
+    /**
+    * Override Kadence blocks Font Sizes
+    */
+    --global-kb-font-size-sm: var(--wp--preset--font-size--small);
+    --global-kb-font-size-md: var(--wp--preset--font-size--normal);
+    --global-kb-font-size-lg: var(--wp--preset--font-size--large);
+    --global-kb-font-size-xl: var(--wp--preset--font-size--x-large);
+    --global-kb-font-size-xxl: var(--wp--preset--font-size--2-x-large);
+    --global-kb-font-size-xxxl: var(--wp--preset--font-size--3-x-large);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        --global-kb-font-size-sm: var(--wp--preset--font-size--heading-6);
+        --global-kb-font-size-md: var(--wp--preset--font-size--heading-5);
+        --global-kb-font-size-lg: var(--wp--preset--font-size--heading-4);
+        --global-kb-font-size-xl: var(--wp--preset--font-size--heading-3);
+        --global-kb-font-size-xxl: var(--wp--preset--font-size--heading-2);
+        --global-kb-font-size-xxxl: var(--wp--preset--font-size--heading-1);
+    }
+}
